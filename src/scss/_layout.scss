@@ -1,0 +1,27 @@
+#memory {
+    background: $colorHover;
+    border: 5px solid $colorHover;
+    width:fit-content;
+    margin: 20px auto;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+}
+
+h1{
+    position:fixed;
+    top:50%;
+    left:5%;
+}
+
+div.reset{
+    position:fixed;
+    top:50%;
+    right:10%;
+}
+
+div#erreurs{
+    position:fixed;
+    top:10%;
+    left:5%;
+}

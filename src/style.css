@@ -1,0 +1,73 @@
+#memory {
+  background: #99A1A6;
+  border: 5px solid #99A1A6;
+  width: fit-content;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+h1 {
+  position: fixed;
+  top: 50%;
+  left: 5%;
+}
+
+div.reset {
+  position: fixed;
+  top: 50%;
+  right: 10%;
+}
+
+div#erreurs {
+  position: fixed;
+  top: 10%;
+  left: 5%;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 170px;
+  height: 170px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  cursor: pointer;
+  margin: 5px;
+  /* This container is needed to position the front and back side */
+  /* Position the front and back side */
+  /* Style the front side (fallback if image is missing) */
+  /* Style the back side */
+}
+.flip-card:hover {
+  border: 1px dotted black;
+}
+.flip-card.active .flip-card-inner, .flip-card.active2 .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card .flip-card-front, .flip-card .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+.flip-card .flip-card-front {
+  background: url("/dist/assets/img/Stone_(texture)_JE5_BE3.webp");
+  color: black;
+}
+.flip-card .flip-card-back {
+  background-color: #fff;
+  transform: rotateY(180deg);
+}
+
+/*# sourceMappingURL=style.css.map */
